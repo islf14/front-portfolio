@@ -1,46 +1,32 @@
-import { Moon, Sun } from 'lucide-react'
-
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuTrigger
-} from '@/components/ui/dropdown-menu'
-import { useTheme } from '@/components/use-theme'
-import { Button } from './ui/button'
+import Dark from './Dark'
 
 export default function Header() {
-  const { setTheme } = useTheme()
-
+  document.addEventListener('mousedown', () => {
+    console.log('in listener')
+  })
   return (
-    <header>
-      <div>
-        <DropdownMenu>
-          <DropdownMenuTrigger asChild>
-            <Button variant="outline" size="icon">
-              <Sun className="h-[1.2rem] w-[1.2rem] scale-100 rotate-0 transition-all dark:scale-0 dark:-rotate-90" />
-              <Moon className="absolute h-[1.2rem] w-[1.2rem] scale-0 rotate-90 transition-all dark:scale-100 dark:rotate-0" />
-              <span className="sr-only">Toggle theme</span>
-            </Button>
-          </DropdownMenuTrigger>
-          <DropdownMenuContent align="end">
-            <DropdownMenuItem onClick={() => setTheme('light')}>
-              Light
-            </DropdownMenuItem>
-            <DropdownMenuItem onClick={() => setTheme('dark')}>
-              Dark
-            </DropdownMenuItem>
-            <DropdownMenuItem onClick={() => setTheme('system')}>
-              System
-            </DropdownMenuItem>
-          </DropdownMenuContent>
-        </DropdownMenu>
-      </div>
-      <div>
-        <span className="text-red-700 dark:text-blue-500">Header</span>
-        <Button variant="secondary" size="default">
-          Contact
-        </Button>
+    <header className="container">
+      <div className="flex justify-between">
+        {/* logo */}
+        <div>
+          <h2>
+            Isaias<span>.</span>
+          </h2>
+        </div>
+        {/* button nav */}
+        <div>
+          <button>btnnav</button>
+        </div>
+        {/* nav */}
+        <div>
+          <div className="">
+            <Dark />
+            <ul className="bg-red-400">
+              <li>kjh</li>
+              <li>contact</li>
+            </ul>
+          </div>
+        </div>
       </div>
     </header>
   )
