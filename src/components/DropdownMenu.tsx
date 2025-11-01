@@ -15,16 +15,27 @@ export function DropdownMenu({ items }: ddmpros) {
   const [focusedIndex, setFocusedIndex] = useState<number | null>(null)
   const dropdownRef = useRef<HTMLButtonElement | null>(null)
   const ulRef = useRef<HTMLUListElement | null>(null)
+  const dropContainer = useRef<HTMLDivElement>(null)
 
   const handleToggle = () => {
     setIsOpen(!isOpen)
   }
 
+  const handleListener = (e: MouseEvent) => {
+    if (!dropContainer.current?.contains(e.target as Node)) {
+      setIsOpen(false)
+    }
+  }
+
   useEffect(() => {
     if (isOpen && ulRef.current) {
+      document.addEventListener('mousedown', handleListener)
       const li = ulRef.current.children[0] as HTMLElement
       li?.focus()
       setFocusedIndex(0)
+      return () => {
+        document.removeEventListener('mousedown', handleListener)
+      }
     }
   }, [isOpen])
 
@@ -92,14 +103,14 @@ export function DropdownMenu({ items }: ddmpros) {
   }
 
   return (
-    <div className="dropdown-container">
+    <div className="" ref={dropContainer}>
       <button
         ref={dropdownRef}
         onClick={handleToggle}
         onKeyDown={handleButtonKeyDown}
         aria-haspopup="true"
         aria-expanded={isOpen}
-        className="inline-flex justify-center items-center border rounded-md bg-background  transition-all shadow-xs [&_svg]:size-4 [&_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] hover:bg-accent hover:text-accent-foreground size-9 dark:bg-input/30 dark:border-input dark:hover:bg-input/50"
+        className="inline-flex justify-center items-center border rounded-md bg-background transition-all shadow-xs [&_svg]:size-4 [&_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] hover:bg-accent hover:text-accent-foreground size-9 dark:bg-input/30 dark:border-input dark:hover:bg-input/50"
       >
         <Sun className="h-[1.2rem] w-[1.2rem] scale-100 rotate-0 transition-all dark:scale-0 dark:-rotate-90" />
         <Moon className="absolute h-[1.2rem] w-[1.2rem] scale-0 rotate-90 transition-all dark:scale-100 dark:rotate-0" />

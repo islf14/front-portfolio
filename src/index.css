@@ -5,6 +5,7 @@
 
 @theme {
   --d-dark: calc(100% - (var(--spacing) * 9));
+  --tr-menu: calc(100% - (var(--spacing) * 20));
 }
 
 @theme inline {
@@ -50,7 +51,7 @@
 :root {
   --ac: #00ff99;
   --ac-h: #00e187;
-  --primary-b: #1c1c22;
+  --primary-b: #767688;
   --radius: 0.625rem;
   --background: oklch(1 0 0);
   --foreground: oklch(0.129 0.042 264.695);
@@ -88,7 +89,7 @@
 .dark {
   --ac: #0d9fc0;
   --ac-h: #15749d;
-  --primary-b: #80809f;
+  --primary-b: #1c1c22;
   --background: oklch(0.129 0.042 264.695);
   --foreground: oklch(0.984 0.003 247.858);
   --card: oklch(0.208 0.042 265.755);
