@@ -1,4 +1,4 @@
-export type CardProps = {
+export type PjCardProps = {
   title: string
   image: string
   description: string
@@ -9,20 +9,20 @@ export type CardProps = {
 type TechProps = { name: string; icon: React.ReactNode }
 type LinkProps = { url: string; icon: React.ReactNode }
 
-export default function Card({
+export default function ProjectCard({
   title,
   image,
   description,
   technologies,
   links
-}: CardProps) {
+}: PjCardProps) {
   return (
-    <div className=" bg-secondary border rounded-md border-b-accent-foreground m-1 p-6 max-w-[300px] lg:max-w-[400px]">
-      <h2 className="mb-1 font-bold">{title}</h2>
+    <div className="bg-secondary rounded-md m-1 p-6 max-w-[300px] lg:max-w-[400px] flex flex-col shadow-lg">
+      <h2 className="mb-4 font-bold">{title}</h2>
       <div className="mb-2">
         <img src={image} />
       </div>
-      <p className="mb-2">{description}</p>
+      <p className="mb-2 grow">{description}</p>
       <hr className="py-2" />
       <ul className="flex flex-wrap gap-2 mb-2">
         {technologies.map((item, index) => {

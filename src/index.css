@@ -6,6 +6,7 @@
 @theme {
   --d-dark: calc(100% - (var(--spacing) * 9));
   --tr-menu: calc(100% - (var(--spacing) * 20));
+  --grid-repeat: repeat(auto-fit, minmax(280px, 1fr));
 }
 
 @theme inline {

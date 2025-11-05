@@ -1,4 +1,5 @@
-import work1 from '../assets/work/thumb1.png'
+import work1 from '../assets/work/work1.png'
+import work2 from '../assets/work/work2.png'
 import HtmlIcon from '@/components/svg/HtmlIcon'
 import CssIcon from '@/components/svg/CssIcon'
 import TsIcon from '@/components/svg/TsIcon'
@@ -7,9 +8,9 @@ import ExIcon from '@/components/svg/ExIcon'
 import PgIcon from '@/components/svg/PgIcon'
 import LinkIcon from '@/components/svg/LinkIcon'
 import GhIcon from '@/components/svg/GhIcon'
-import Card, { type CardProps } from './Card'
+import ProjectCard, { type PjCardProps } from './ProjectCard'
 
-const projects: CardProps[] = [
+const projects: PjCardProps[] = [
   {
     title: 'Chat Online',
     image: work1,
@@ -30,12 +31,10 @@ const projects: CardProps[] = [
   },
   {
     title: 'Back',
-    image: work1,
+    image: work2,
     description:
-      'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis, provident officia? Corporis et deserunt deleniti nemo in aut! Est aperiam et sequi minima architecto debitis in ea soluta facilis ullam.',
+      'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis, provident officia? Corporis et deserunt detis in ea soluta facilis ullam.',
     technologies: [
-      { name: 'Html', icon: <HtmlIcon /> },
-      { name: 'Css', icon: <CssIcon /> },
       { name: 'TypeScript', icon: <TsIcon /> },
       { name: 'NodeJs', icon: <NodeIcon /> },
       { name: 'Express', icon: <ExIcon /> },
@@ -49,13 +48,10 @@ const projects: CardProps[] = [
   {
     title: 'Project in NestJS',
     image: work1,
-    description:
-      'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis, provident officia? Corporis et deserunt deleniti nemo in aut! Est aperiam et sequi minima architecto debitis in ea soluta facilis ullam.',
+    description: 'Lorem ipsum d ?cilis ullam.',
     technologies: [
       { name: 'Html', icon: <HtmlIcon /> },
-      { name: 'Css', icon: <CssIcon /> },
       { name: 'TypeScript', icon: <TsIcon /> },
-      { name: 'NodeJs', icon: <NodeIcon /> },
       { name: 'Express', icon: <ExIcon /> },
       { name: 'PostgreSQL', icon: <PgIcon /> }
     ],
@@ -103,15 +99,15 @@ export default function Home() {
           </div>
         </div>
         {/* projects */}
-        <hr className="my-4" />
+        <hr className="my-8" />
         <div className="">
-          <h2 className="mb-2 font-bold">Personal Projects</h2>
+          <h2 className="my-6 text-2xl font-bold">Projects</h2>
           {/* all cards */}
-          <div className="flex gap-3 flex-col flex-wrap md:flex-row justify-center items-center ">
+          <div className="flex flex-wrap gap-3 justify-center">
             {/* Card */}
             {projects.map((item, index) => {
               return (
-                <Card
+                <ProjectCard
                   key={index}
                   title={item.title}
                   image={item.image}
