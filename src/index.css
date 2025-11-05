@@ -11,6 +11,7 @@
 @theme inline {
   --color-primary-b: var(--primary-b);
   --color-ac: var(--ac);
+  --color-ac-h: var(--ac-h);
   --color-sidebar-ring: var(--sidebar-ring);
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
@@ -49,8 +50,8 @@
 }
 
 :root {
-  --ac: #00ff99;
-  --ac-h: #00e187;
+  --ac: #07b972;
+  --ac-h: #036e43;
   --primary-b: #767688;
   --radius: 0.625rem;
   --background: oklch(1 0 0);
@@ -87,8 +88,8 @@
 }
 
 .dark {
-  --ac: #0d9fc0;
-  --ac-h: #15749d;
+  --ac: #00ff99;
+  --ac-h: #00e187;
   --primary-b: #1c1c22;
   --background: oklch(0.129 0.042 264.695);
   --foreground: oklch(0.984 0.003 247.858);

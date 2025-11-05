@@ -121,7 +121,7 @@ export function DropdownMenu({ items }: ddmpros) {
         <ul
           role="menu"
           ref={ulRef}
-          className="fixed bg-popover border rounded-md min-w-32 transform -translate-x-(--d-dark) p-1 shadow-md"
+          className="fixed bg-popover border rounded-md min-w-32 transform -translate-x-(--d-dark) p-1 shadow-md mt-1"
         >
           {items.map((item, index) => (
             <li

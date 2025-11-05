@@ -9,9 +9,5 @@ export default function Dark() {
     { value: 'System', setFunction: () => setTheme('system') }
   ]
 
-  return (
-    <div>
-      <DropdownMenu items={themes} />
-    </div>
-  )
+  return <DropdownMenu items={themes} />
 }
