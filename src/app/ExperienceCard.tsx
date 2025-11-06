@@ -16,20 +16,20 @@ export default function ExperienceCard({
   activities
 }: ExCardProps) {
   return (
-    <div className="bg-secondary rounded-md p-4 m-2 shadow-md">
+    <div className="bg-secondary rounded-md p-4 m-2 shadow-md border border-transparent hover:border-ac">
       <div className="flex gap-2 justify-between font-bold">
         <h3>{company}</h3>
         <span className="text-right">{place}</span>
       </div>
       <div className="flex gap-2 justify-between mt-2">
-        <h3 className="font-bold">{position}</h3>
+        <h3 className="font-bold text-ac">{position}</h3>
         <span className="italic text-right">{date}</span>
       </div>
       <ul className="mt-2">
         {activities.map((item, index) => {
           return (
             <li key={index} className="flex gap-2 ">
-              <Check className="h-4 w-4 mt-1" />
+              <Check className="h-4 w-4 mt-1 text-ac" />
               {item}
             </li>
           )
