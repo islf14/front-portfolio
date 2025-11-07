@@ -10,6 +10,9 @@ import LinkIcon from '@/components/svg/LinkIcon'
 import GhIcon from '@/components/svg/GhIcon'
 import ProjectCard, { type PjCardProps } from './ProjectCard'
 
+const priDescription =
+  'I have practical experience in MERN stack, with mastery in Express JS, NestJS and also Laravel, with the intention of providing my skills in web applications, mobile applications, databases and API development to contribute to innovative projects.'
+
 const projects: PjCardProps[] = [
   {
     title: 'Chat Online',
@@ -86,38 +89,31 @@ export default function Home() {
       <div className="mx-2 mt-8">
         {/* about */}
         <div className=" text-center sm:text-left">
-          <div className="">
-            <span className="text-xl">Software Developer</span>
-            <h2 className="text-4xl font-bold mb-6">
-              Hello, I&apos;m <br />
-              <span className="text-ac">Isaias Laqui</span>.
-            </h2>
-            <p className="text-white/80 w-max-[500px]">
-              I have practical experience in the MERN stack, specializing in
-              Express JS and Nest JS.
-            </p>
-          </div>
+          <span className="text-xl">Software Developer</span>
+          <h2 className="text-4xl font-bold mb-6">
+            Hello, I&apos;m <br />
+            <span className="text-ac">Isaías Laqui</span>.
+          </h2>
+          <p className=" w-max-[500px]">{priDescription}</p>
         </div>
         {/* projects */}
         <hr className="my-8" />
-        <div className="">
-          <h2 className="my-6 text-2xl font-bold">Projects</h2>
-          {/* all cards */}
-          <div className="flex flex-wrap gap-3 justify-center">
-            {/* Card */}
-            {projects.map((item, index) => {
-              return (
-                <ProjectCard
-                  key={index}
-                  title={item.title}
-                  image={item.image}
-                  description={item.description}
-                  technologies={item.technologies}
-                  links={item.links}
-                />
-              )
-            })}
-          </div>
+        <h2 className="my-6 text-2xl font-bold">Projects</h2>
+        {/* all cards */}
+        <div className="flex flex-wrap gap-3 justify-center mb-8">
+          {/* Card */}
+          {projects.map((item, index) => {
+            return (
+              <ProjectCard
+                key={index}
+                title={item.title}
+                image={item.image}
+                description={item.description}
+                technologies={item.technologies}
+                links={item.links}
+              />
+            )
+          })}
         </div>
       </div>
     </section>

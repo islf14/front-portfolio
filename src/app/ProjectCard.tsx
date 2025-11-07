@@ -17,7 +17,7 @@ export default function ProjectCard({
   links
 }: PjCardProps) {
   return (
-    <div className="bg-secondary rounded-md m-1 p-6 max-w-[300px] lg:max-w-[400px] flex flex-col shadow-lg">
+    <div className="bg-secondary rounded-md m-1 p-6 max-w-[300px] lg:max-w-[400px] flex flex-col shadow-lg border border-transparent hover:border-ac">
       <h2 className="mb-4 font-bold">{title}</h2>
       <div className="mb-2">
         <img src={image} />

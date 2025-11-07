@@ -2,6 +2,8 @@ import { useEffect, useRef, useState } from 'react'
 import Dark from './Dark'
 import { Menu, X } from 'lucide-react'
 import { Link, NavLink } from 'react-router'
+import logoLight from '@/assets/logo/logoIsaias.png'
+import logoDark from '@/assets/logo/logoIsaiasDark.png'
 
 const menuLinks = [
   { name: 'Home', path: '/' },
@@ -44,16 +46,27 @@ export default function Header() {
         {/* logo */}
         <div>
           <Link to={'/'}>
-            <h1 className="text-4xl font-semibold">
-              Isaias<span className="text-ac">.</span>
+            <h1 className="text-4xl font-semibold flex transition-all">
+              <img
+                src={logoLight}
+                alt="Logo Light"
+                className="w-32 md:w-44 scale-100 rotate-0 dark:scale-0 dark:-rotate-90 transition-all"
+              />
+              <img
+                src={logoDark}
+                alt="Logo Dark"
+                className="absolute w-32 md:w-44 scale-0 -rotate-90 dark:scale-100 dark:rotate-0 transition-all"
+              />
             </h1>
           </Link>
         </div>
         {/* nav and theme */}
         <div className="sm:gap-4 sm:inline-flex">
           {/* 2 buttons */}
-          <div className="inline-flex gap-2 sm:order-2">
+          <div className="inline-flex gap-2 sm:order-2 z-10">
+            {/* theme button */}
             <Dark />
+            {/* menu button */}
             <button
               ref={btnMenuRef}
               onClick={handleNav}

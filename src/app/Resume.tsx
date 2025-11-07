@@ -5,46 +5,116 @@ import TsIcon from '@/components/svg/TsIcon'
 import NodeIcon from '@/components/svg/NodeIcon'
 import ExIcon from '@/components/svg/ExIcon'
 import PgIcon from '@/components/svg/PgIcon'
+import NestIcon from '@/components/svg/NestIcon'
+import GraphIcon from '@/components/svg/GraphIcon'
+import LaravelIcon from '@/components/svg/LaravelIcon'
+import MongoIcon from '@/components/svg/MongoIcon'
+import MysqlIcon from '@/components/svg/MysqlIcon'
+import MariaIcon from '@/components/svg/MariaIcon'
+import SqliteIcon from '@/components/svg/SqliteIcon'
+import SqlIcon from '@/components/svg/SqlIcon'
+import JsIcon from '@/components/svg/JsIcon'
+import ReactIcon from '@/components/svg/ReactIcon'
+import ReactRouterIcon from '@/components/svg/ReactRouterIcon'
+import TailwindIcon from '@/components/svg/TailwindIcon'
+import ViteIcon from '@/components/svg/ViteIcon'
+import NextIcon from '@/components/svg/NextIcon'
+
+const description =
+  "I am Full-Stack Developer and I have a Bachelor's Degree in Computer Science and Systems Engineering, with experience in different JavaScript's technologies also databases."
 
 const experiences = [
   {
-    company: 'Municipalidad Distrital de Ilabaya',
-    place: 'Ilabaya - Tacna, Perú',
-    position: 'Full Stack Developer',
-    date: 'Abril 2023 - Octubre 2024',
-    activities: ['Gestión de proyectos', 'Trabajo en equipo']
+    company: 'District Municipality of Ilabaya',
+    place: 'Ilabaya - Tacna, Peru',
+    position: 'Project Assistant',
+    date: 'April 2023 - October 2024',
+    activities: ['Systems administration.', 'Project management and teamwork.']
   },
   {
-    company: 'Municipalidad Distrital de Ilabaya',
-    place: 'Ilabaya - Tacna, Perú',
-    position: 'Full Stack Developer',
-    date: 'Abril 2023 - Octubre 2024',
-    activities: ['Gestión de proyectos', 'Trabajo en equipo']
+    company: 'District Municipality of Ilabaya',
+    place: 'Ilabaya - Tacna, Peru',
+    position: 'ICT Assistant',
+    date: 'May 2021 - December 2022',
+    activities: [
+      'Systems support.',
+      'Technical support for computer equipment and structured cabling.',
+      'Project management and teamwork.'
+    ]
   },
   {
-    company: 'Municipalidad Distrital de Ilabaya',
-    place: 'Ilabaya - Tacna, Perú',
-    position: 'Full Stack Developer',
-    date: 'Abril 2023 - Octubre 2024',
-    activities: ['Gestión de proyectos', 'Trabajo en equipo']
+    company:
+      'Local Educational Management Unit of Tacna and Regional Directorate of Education of Tacna',
+    place: 'Tacna, Perú',
+    position: 'Professional Internship',
+    date: 'March 2020 - February 2021',
+    activities: [
+      'Develop new modules for the web-based document processing system.',
+      'Verify the correct functioning of the structured cabling.',
+      'Resolve any issues.'
+    ]
+  },
+  {
+    company: 'District Municipality of Coronel Gregorio Albarracín Lanchipa',
+    place: 'Coronel Gregorio Albarracín Lanchipa - Tacna, Perú',
+    position: 'Internship',
+    date: 'April 2019 - Agost 2019',
+    activities: [
+      'Develop modules for a mobile application for incident monitoring',
+      'Technical support for computer equipment and local network.'
+    ]
   }
 ]
 
-const skills = [
-  { name: 'Html', icon: <HtmlIcon /> },
-  { name: 'Css', icon: <CssIcon /> },
-  { name: 'TypeScript', icon: <TsIcon /> },
+const education = {
+  entity: 'Jorge Basadre Grohmann National University',
+  place: 'Tacna, Peru',
+  grade: "Bachelor's degree in Computer Engineering and Systems",
+  date: 'December 2020'
+}
+
+const skillsBack = [
   { name: 'NodeJs', icon: <NodeIcon /> },
+  { name: 'TypeScript', icon: <TsIcon /> },
+  { name: 'NestJS', icon: <NestIcon /> },
   { name: 'Express', icon: <ExIcon /> },
-  { name: 'PostgreSQL', icon: <PgIcon /> }
+  { name: 'REST API', icon: <CssIcon /> },
+  { name: 'GraphQL', icon: <GraphIcon /> },
+  { name: 'Laravel', icon: <LaravelIcon /> }
 ]
+const skillsDB = [
+  { name: 'PostgreSQL', icon: <PgIcon /> },
+  { name: 'MongoDB', icon: <MongoIcon /> },
+  { name: 'MySQL', icon: <MysqlIcon /> },
+  { name: 'MariaDB', icon: <MariaIcon /> },
+  { name: 'SQLite', icon: <SqliteIcon /> },
+  { name: 'SQL Server', icon: <SqlIcon /> }
+]
+const skillsFront = [
+  { name: 'Html 5', icon: <HtmlIcon /> },
+  { name: 'Css 3', icon: <CssIcon /> },
+  { name: 'JavaScript', icon: <JsIcon /> },
+  { name: 'TypeScript', icon: <TsIcon /> },
+  { name: 'React', icon: <ReactIcon /> },
+  { name: 'React Router', icon: <ReactRouterIcon /> },
+  { name: 'Tailwind', icon: <TailwindIcon /> },
+  { name: 'Vite', icon: <ViteIcon /> },
+  { name: 'Next', icon: <NextIcon /> }
+]
+const skillsMobile = [{ name: 'React Native', icon: <ReactIcon /> }]
+
+// *******************************
 
 export default function Resume() {
   return (
     <section className="container mx-auto">
       <div className="mx-2 mt-8">
-        {/* experience */}
+        {/* summary */}
         <div>
+          <p>{description}</p>
+        </div>
+        {/* experience */}
+        <div className="mt-6">
           <h2 className="font-bold text-2xl">
             Experience<span className="text-ac">:</span>
           </h2>
@@ -72,30 +142,75 @@ export default function Resume() {
           </h2>
           <div className="mt-4 bg-secondary p-4 m-2 border border-transparent hover:border-ac rounded-md">
             <div className="flex gap-2 justify-between font-bold">
-              <span>Universidad Nacional Jorge Basadre Grohmann</span>
-              <span className="text-right">Tacna, Perú</span>
+              <span>{education.entity}</span>
+              <span className="text-right">{education.place}</span>
             </div>
             <div className="flex gap-2 justify-between">
-              <span className="text-ac font-bold">
-                Bachiller en Ingeniería en Informática y Sistemas
-              </span>
-              <span className="text-right italic">Diciembre 2020</span>
+              <span className="text-ac font-bold">{education.grade}</span>
+              <span className="text-right italic">{education.date}</span>
             </div>
           </div>
         </div>
         {/* skills */}
-        <div className="mt-6">
+        <div className="mt-6 mb-9">
           <h2 className="font-bold text-2xl">
             Skills<span className="text-ac">:</span>
           </h2>
-          <ul className="my-6 flex gap-3 flex-wrap">
-            {skills.map((item, index) => {
+          {/* Backend */}
+          <h3 className="mt-5 font-bold text-xl">Backend:</h3>
+          <ul className="my-3 flex gap-3 flex-wrap">
+            {skillsBack.map((item, index) => {
               return (
                 <li
                   key={index}
-                  className="bg-popover rounded-md flex gap-2 p-1 shrink-0 items-center"
+                  className="bg-secondary rounded-md border border-ac dark:border-transparent dark:hover:border-ac flex gap-2 p-1 shrink-0 items-center"
                 >
-                  <span className="text-ac">{item.name}</span>
+                  <span className="dark:text-ac">{item.name}</span>
+                  <span className="text-xl">{item.icon}</span>
+                </li>
+              )
+            })}
+          </ul>
+          {/* Database */}
+          <h3 className="mt-5 font-black text-xl">Database:</h3>
+          <ul className="my-3 flex gap-3 flex-wrap">
+            {skillsDB.map((item, index) => {
+              return (
+                <li
+                  key={index}
+                  className="bg-secondary rounded-md border border-ac dark:border-transparent dark:hover:border-ac flex gap-2 p-1 shrink-0 items-center"
+                >
+                  <span className="dark:text-ac">{item.name}</span>
+                  <span className="text-xl">{item.icon}</span>
+                </li>
+              )
+            })}
+          </ul>
+          {/* Frontend */}
+          <h3 className="mt-5 font-black text-xl">Frontend:</h3>
+          <ul className="my-3 flex gap-3 flex-wrap">
+            {skillsFront.map((item, index) => {
+              return (
+                <li
+                  key={index}
+                  className="bg-secondary rounded-md border border-ac dark:border-transparent dark:hover:border-ac flex gap-2 p-1 shrink-0 items-center"
+                >
+                  <span className="dark:text-ac">{item.name}</span>
+                  <span className="text-xl">{item.icon}</span>
+                </li>
+              )
+            })}
+          </ul>
+          {/* Mobile */}
+          <h3 className="mt-5 font-black text-xl">Mobile:</h3>
+          <ul className="my-3 flex gap-3 flex-wrap">
+            {skillsMobile.map((item, index) => {
+              return (
+                <li
+                  key={index}
+                  className="bg-secondary rounded-md border border-ac dark:border-transparent dark:hover:border-ac flex gap-2 p-1 shrink-0 items-center"
+                >
+                  <span className="dark:text-ac">{item.name}</span>
                   <span className="text-xl">{item.icon}</span>
                 </li>
               )
