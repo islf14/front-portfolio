@@ -20,7 +20,9 @@ export default function ProjectCard({
     <div className="bg-secondary rounded-md m-1 p-6 max-w-[300px] lg:max-w-[400px] flex flex-col shadow-lg border border-transparent hover:border-ac">
       <h2 className="mb-4 font-bold">{title}</h2>
       <div className="mb-2">
-        <img src={image} />
+        <a href={links[0].url} target="_blank">
+          <img src={image} />
+        </a>
       </div>
       <p className="mb-2 grow">{description}</p>
       <hr className="py-2" />
@@ -42,7 +44,7 @@ export default function ProjectCard({
       <div className="flex gap-4">
         {links.map((item, index) => {
           return (
-            <a key={index} href={item.url}>
+            <a key={index} href={item.url} target="_blank">
               <div className="bg-white/5 w-12 h-12 rounded-full flex justify-center items-center border border-ac-h hover:text-ac">
                 {item.icon}
               </div>

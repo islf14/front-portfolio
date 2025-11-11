@@ -52,6 +52,7 @@ export function DropdownMenu({ items }: ddmpros) {
     }
   }
 
+  // used when the cursor is over the li element
   const mouseF = (index: number) => {
     setFocusedIndex(index)
     const li = ulRef.current?.children[index] as HTMLElement

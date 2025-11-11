@@ -19,6 +19,7 @@ import ReactRouterIcon from '@/components/svg/ReactRouterIcon'
 import TailwindIcon from '@/components/svg/TailwindIcon'
 import ViteIcon from '@/components/svg/ViteIcon'
 import NextIcon from '@/components/svg/NextIcon'
+import { useState } from 'react'
 
 const description =
   "I am Full-Stack Developer and I have a Bachelor's Degree in Computer Science and Systems Engineering, with experience in different JavaScript's technologies also databases."
@@ -106,116 +107,167 @@ const skillsMobile = [{ name: 'React Native', icon: <ReactIcon /> }]
 // *******************************
 
 export default function Resume() {
+  const [exp, setExp] = useState<boolean>(true)
+  const [edu, setEdu] = useState<boolean>(false)
+  const [ski, setSki] = useState<boolean>(false)
+
+  function manageExp() {
+    setExp(true)
+    setEdu(false)
+    setSki(false)
+  }
+  function manageEdu() {
+    setExp(false)
+    setEdu(true)
+    setSki(false)
+  }
+  function manageSki() {
+    setExp(false)
+    setEdu(false)
+    setSki(true)
+  }
+
+  const btns = [
+    { name: 'Experience', onClick: manageExp, status: exp },
+    { name: 'Skills', onClick: manageSki, status: ski },
+    { name: 'Education', onClick: manageEdu, status: edu }
+  ]
+
   return (
     <section className="container mx-auto">
-      <div className="mx-2 mt-8">
+      <div className="mx-2 mt-8 md:flex md:gap-6">
         {/* summary */}
-        <div>
+        <div className="md:w-1/3">
           <p>{description}</p>
-        </div>
-        {/* experience */}
-        <div className="mt-6">
-          <h2 className="font-bold text-2xl">
-            Experience<span className="text-ac">:</span>
-          </h2>
-          <div className="grid mt-4 gap-3 lg:grid-cols-2 xl:grid-cols-3">
-            {/* card experience */}
-            {experiences.map((item, index) => {
+          <div role="tablist" className="flex flex-col mt-4 gap-3 items-center">
+            {btns.map((item, index) => {
               return (
-                <ExperienceCard
+                <button
                   key={index}
-                  company={item.company}
-                  place={item.place}
-                  position={item.position}
-                  date={item.date}
-                  activities={item.activities}
-                />
+                  role="tab"
+                  tabIndex={0}
+                  data-state="active"
+                  onClick={item.onClick}
+                  className={`${
+                    item.status ? 'bg-ac text-black' : 'bg-secondary'
+                  } w-2/3 rounded-md outline-1 hover:outline-ac focus:outline-ac-h focus:outline-2`}
+                >
+                  {item.name}
+                </button>
               )
             })}
           </div>
         </div>
+        {/* content */}
+        <div className="mt-6 mb-9 md:mt-0 md:w-2/3 ">
+          {/* experience */}
+          <div role="tappanel" tabIndex={0} hidden={!exp} className="">
+            <h2 className="font-bold text-2xl">
+              Experience<span className="text-ac">:</span>
+            </h2>
+            <div className="grid mt-4 gap-3 lg:grid-cols-2 2xl:grid-cols-3">
+              {/* card experience */}
+              {experiences.map((item, index) => {
+                return (
+                  <ExperienceCard
+                    key={index}
+                    company={item.company}
+                    place={item.place}
+                    position={item.position}
+                    date={item.date}
+                    activities={item.activities}
+                  />
+                )
+              })}
+            </div>
+          </div>
 
-        {/* education */}
-        <div className="mt-6">
-          <h2 className="font-bold text-2xl">
-            Education<span className="text-ac">:</span>
-          </h2>
-          <div className="mt-4 bg-secondary p-4 m-2 border border-transparent hover:border-ac rounded-md">
-            <div className="flex gap-2 justify-between font-bold">
-              <span>{education.entity}</span>
-              <span className="text-right">{education.place}</span>
-            </div>
-            <div className="flex gap-2 justify-between">
-              <span className="text-ac font-bold">{education.grade}</span>
-              <span className="text-right italic">{education.date}</span>
+          {/* skills */}
+          <div hidden={!ski} className="mt-6 md:mt-0">
+            <h2 className="font-bold text-2xl">
+              Skills<span className="text-ac">:</span>
+            </h2>
+            {/* Backend */}
+            <h3 className="mt-5 font-bold text-xl">Backend:</h3>
+            <ul className="my-3 flex gap-3 flex-wrap">
+              {skillsBack.map((item, index) => {
+                return (
+                  <li
+                    key={index}
+                    className="bg-secondary rounded-md border border-ac dark:border-transparent dark:hover:border-ac flex gap-2 p-1 shrink-0 items-center"
+                  >
+                    <span className="dark:text-ac">{item.name}</span>
+                    <span className="text-xl">{item.icon}</span>
+                  </li>
+                )
+              })}
+            </ul>
+            {/* Database */}
+            <h3 className="mt-5 font-black text-xl">Database:</h3>
+            <ul className="my-3 flex gap-3 flex-wrap">
+              {skillsDB.map((item, index) => {
+                return (
+                  <li
+                    key={index}
+                    className="bg-secondary rounded-md border border-ac dark:border-transparent dark:hover:border-ac flex gap-2 p-1 shrink-0 items-center"
+                  >
+                    <span className="dark:text-ac">{item.name}</span>
+                    <span className="text-xl">{item.icon}</span>
+                  </li>
+                )
+              })}
+            </ul>
+            {/* Frontend */}
+            <h3 className="mt-5 font-black text-xl">Frontend:</h3>
+            <ul className="my-3 flex gap-3 flex-wrap">
+              {skillsFront.map((item, index) => {
+                return (
+                  <li
+                    key={index}
+                    className="bg-secondary rounded-md border border-ac dark:border-transparent dark:hover:border-ac flex gap-2 p-1 shrink-0 items-center"
+                  >
+                    <span className="dark:text-ac">{item.name}</span>
+                    <span className="text-xl">{item.icon}</span>
+                  </li>
+                )
+              })}
+            </ul>
+            {/* Mobile */}
+            <h3 className="mt-5 font-black text-xl">Mobile:</h3>
+            <ul className="my-3 flex gap-3 flex-wrap">
+              {skillsMobile.map((item, index) => {
+                return (
+                  <li
+                    key={index}
+                    className="bg-secondary rounded-md border border-ac dark:border-transparent dark:hover:border-ac flex gap-2 p-1 shrink-0 items-center"
+                  >
+                    <span className="dark:text-ac">{item.name}</span>
+                    <span className="text-xl">{item.icon}</span>
+                  </li>
+                )
+              })}
+            </ul>
+          </div>
+
+          {/* education */}
+          <div hidden={!edu} className="mt-6 md:mt-0">
+            <h2 className="font-bold text-2xl">
+              Education<span className="text-ac">:</span>
+            </h2>
+            <div className="grid mt-4 gap-3">
+              {/* card education */}
+              <div className="bg-secondary p-4 m-2 border border-transparent hover:border-ac rounded-md">
+                <div className="flex gap-2 justify-between font-bold">
+                  <span>{education.entity}</span>
+                  <span className="text-right">{education.place}</span>
+                </div>
+                <div className="flex gap-2 justify-between">
+                  <span className="text-ac font-bold">{education.grade}</span>
+                  <span className="text-right italic">{education.date}</span>
+                </div>
+              </div>
             </div>
           </div>
-        </div>
-        {/* skills */}
-        <div className="mt-6 mb-9">
-          <h2 className="font-bold text-2xl">
-            Skills<span className="text-ac">:</span>
-          </h2>
-          {/* Backend */}
-          <h3 className="mt-5 font-bold text-xl">Backend:</h3>
-          <ul className="my-3 flex gap-3 flex-wrap">
-            {skillsBack.map((item, index) => {
-              return (
-                <li
-                  key={index}
-                  className="bg-secondary rounded-md border border-ac dark:border-transparent dark:hover:border-ac flex gap-2 p-1 shrink-0 items-center"
-                >
-                  <span className="dark:text-ac">{item.name}</span>
-                  <span className="text-xl">{item.icon}</span>
-                </li>
-              )
-            })}
-          </ul>
-          {/* Database */}
-          <h3 className="mt-5 font-black text-xl">Database:</h3>
-          <ul className="my-3 flex gap-3 flex-wrap">
-            {skillsDB.map((item, index) => {
-              return (
-                <li
-                  key={index}
-                  className="bg-secondary rounded-md border border-ac dark:border-transparent dark:hover:border-ac flex gap-2 p-1 shrink-0 items-center"
-                >
-                  <span className="dark:text-ac">{item.name}</span>
-                  <span className="text-xl">{item.icon}</span>
-                </li>
-              )
-            })}
-          </ul>
-          {/* Frontend */}
-          <h3 className="mt-5 font-black text-xl">Frontend:</h3>
-          <ul className="my-3 flex gap-3 flex-wrap">
-            {skillsFront.map((item, index) => {
-              return (
-                <li
-                  key={index}
-                  className="bg-secondary rounded-md border border-ac dark:border-transparent dark:hover:border-ac flex gap-2 p-1 shrink-0 items-center"
-                >
-                  <span className="dark:text-ac">{item.name}</span>
-                  <span className="text-xl">{item.icon}</span>
-                </li>
-              )
-            })}
-          </ul>
-          {/* Mobile */}
-          <h3 className="mt-5 font-black text-xl">Mobile:</h3>
-          <ul className="my-3 flex gap-3 flex-wrap">
-            {skillsMobile.map((item, index) => {
-              return (
-                <li
-                  key={index}
-                  className="bg-secondary rounded-md border border-ac dark:border-transparent dark:hover:border-ac flex gap-2 p-1 shrink-0 items-center"
-                >
-                  <span className="dark:text-ac">{item.name}</span>
-                  <span className="text-xl">{item.icon}</span>
-                </li>
-              )
-            })}
-          </ul>
         </div>
       </div>
     </section>

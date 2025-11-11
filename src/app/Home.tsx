@@ -1,4 +1,5 @@
 import work1 from '../assets/work/work1.png'
+import shortener from '../assets/work/shortener.png'
 import work2 from '../assets/work/work2.png'
 import HtmlIcon from '@/components/svg/HtmlIcon'
 import CssIcon from '@/components/svg/CssIcon'
@@ -9,27 +10,33 @@ import PgIcon from '@/components/svg/PgIcon'
 import LinkIcon from '@/components/svg/LinkIcon'
 import GhIcon from '@/components/svg/GhIcon'
 import ProjectCard, { type PjCardProps } from './ProjectCard'
+import MongoIcon from '@/components/svg/MongoIcon'
+import JsIcon from '@/components/svg/JsIcon'
 
 const priDescription =
   'I have practical experience in MERN stack, with mastery in Express JS, NestJS and also Laravel, with the intention of providing my skills in web applications, mobile applications, databases and API development to contribute to innovative projects.'
 
 const projects: PjCardProps[] = [
   {
-    title: 'Chat Online',
-    image: work1,
+    title: 'URL Shortener',
+    image: shortener,
     description:
-      'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis, provident officia? Corporis et deserunt deleniti nemo in aut! Est aperiam et sequi minima architecto debitis in ea soluta facilis ullam.',
+      'This application shortens URLs. It takes the first three characters of the provided URL, along with three numbers, and creates a six-character path. If the path is already in use, it modifies the last letter and the following one until it is available.',
     technologies: [
+      { name: 'NodeJs', icon: <NodeIcon /> },
+      { name: 'TypeScript', icon: <TsIcon /> },
+      { name: 'Express Js', icon: <ExIcon /> },
+      { name: 'MongoDB', icon: <MongoIcon /> },
       { name: 'Html', icon: <HtmlIcon /> },
       { name: 'Css', icon: <CssIcon /> },
-      { name: 'TypeScript', icon: <TsIcon /> },
-      { name: 'NodeJs', icon: <NodeIcon /> },
-      { name: 'Express', icon: <ExIcon /> },
-      { name: 'PostgreSQL', icon: <PgIcon /> }
+      { name: 'JavaScript', icon: <JsIcon /> }
     ],
     links: [
-      { url: 'github.com', icon: <LinkIcon /> },
-      { url: 'github.com', icon: <GhIcon /> }
+      { url: 'https://is-url.vercel.app/', icon: <LinkIcon /> },
+      {
+        url: 'https://github.com/islf14/url-shortening-service',
+        icon: <GhIcon />
+      }
     ]
   },
   {
@@ -88,13 +95,13 @@ export default function Home() {
     <section className="container mx-auto">
       <div className="mx-2 mt-8">
         {/* about */}
-        <div className=" text-center sm:text-left">
+        <div className=" text-center flex flex-col justify-center items-center sm:text-left sm:items-start">
           <span className="text-xl">Software Developer</span>
           <h2 className="text-4xl font-bold mb-6">
             Hello, I&apos;m <br />
             <span className="text-ac">Isaías Laqui</span>.
           </h2>
-          <p className=" w-max-[500px]">{priDescription}</p>
+          <p className="max-w-[500px] m-auto sm:ml-0">{priDescription}</p>
         </div>
         {/* projects */}
         <hr className="my-8" />
