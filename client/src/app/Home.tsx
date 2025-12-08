@@ -80,7 +80,10 @@ const projects: PjCardProps[] = [
       { name: 'Tailwind CSS', icon: <TailwindIcon /> }
     ],
     links: [
-      { url: 'https://business-directory-ten.vercel.app', icon: <LinkIcon /> },
+      {
+        url: 'https://business-directory-ten.vercel.app/login',
+        icon: <LinkIcon />
+      },
       { url: 'https://github.com/islf14/business-nest', icon: <GhIcon /> }
     ]
   }
