@@ -1,0 +1,43 @@
+{
+  "nav": {
+    "home": "Inicio",
+    "resume": "Hoja de vida",
+    "contact": "Contacto"
+  },
+  "header": {
+    "message": "Hola"
+  },
+  "home": {
+    "title": "Desarrollador de Software",
+    "name1": "Hola, soy",
+    "name2": "Isaías Laqui",
+    "description": "Tengo experiencia práctica en stack MERN, con dominio en Express JS, NestJS y también Laravel, con la intención de aportar mis habilidades en aplicaciones web, aplicaciones móviles, bases de datos y desarrollo de API para contribuir a proyectos innovadores.",
+    "subtitle": "Projectos",
+    "projects": {
+      "project1": {
+        "title": "Acortador de URL",
+        "description": "Esta aplicación acorta URL. Toma los tres primeros caracteres de la URL proporcionada, junto con tres números, y crea una ruta de seis caracteres. Si la ruta ya está en uso, modifica la última letra y la siguiente hasta que esté disponible."
+      },
+      "project2": {
+        "title": "Charlar",
+        "description": "Esta aplicación web crea una sala de chat donde cualquiera puede unirse y enviar mensajes. No es posible que dos usuarios tengan el mismo nombre. Cuando el último usuario cierra sesión, el chat se cierra y los usuarios se reinician. Luego, el nuevo usuario inicia sesión y crea un nuevo chat."
+      },
+      "project3": {
+        "title": "Directorio de empresas",
+        "description": "Esta aplicación permite registrar usuarios, categorías y empresas. Utiliza jsonwebtoken para la autenticación, bcrypt para el hash de contraseñas y almacenamiento de blobs para imágenes. También configuro CSP y CORS para mayor seguridad."
+      }
+    }
+  },
+  "resume": {
+    "description": "Soy Desarrollador Full-Stack y tengo Bachiller en Ingeniería en Informática y Sistemas, con experiencia en diferentes tecnologías de JavaScript también bases de datos.",
+    "experience": "Experiencia",
+    "skills": "Habilidades",
+    "education": "Educación"
+  },
+  "contact": {
+    "name": "Nombre",
+    "email": "Correo electrónico",
+    "cellphone": "Teléfono móvil",
+    "address": "Dirección"
+  }
+}

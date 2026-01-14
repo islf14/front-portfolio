@@ -1,0 +1,43 @@
+{
+  "nav": {
+    "home": "Home",
+    "resume": "Resume",
+    "contact": "Contact"
+  },
+  "header": {
+    "message": "Welcome"
+  },
+  "home": {
+    "title": "Software Developer",
+    "name1": "Hello, I'm",
+    "name2": "Isaías Laqui",
+    "description": "I have practical experience in MERN stack, with mastery in Express JS, NestJS and also Laravel, with the intention of providing my skills in web applications, mobile applications, databases and API development to contribute to innovative projects.",
+    "subtitle": "Projects",
+    "projects": {
+      "project1": {
+        "title": "URL Shortener",
+        "description": "This application shortens URLs. It takes the first three characters of the provided URL, along with three numbers, and creates a six-character path. If the path is already in use, it modifies the last letter and the following one until it is available."
+      },
+      "project2": {
+        "title": "Chat",
+        "description": "This web application creates a chat room where anyone can join and send messages. It is not possible for two users to have the same name. When the last user logs out, the chat closes and users are reset. Then, the new user logs in and creates a new chat."
+      },
+      "project3": {
+        "title": "Business Directory",
+        "description": "This application allows you to register users, categories, and companies. It uses jsonwebtoken for authentication, bcrypt for password hashing, and blob storage for images. I also configure CSP and CORS for added security."
+      }
+    }
+  },
+  "resume": {
+    "description": "I am Full-Stack Developer and I have a Bachelor's Degree in Computer Science and Systems Engineering, with experience in different JavaScript's technologies also databases.",
+    "experience": "Experience",
+    "skills": "Skills",
+    "education": "Education"
+  },
+  "contact": {
+    "name": "Name",
+    "email": "Email",
+    "cellphone": "Cell phone",
+    "address": "Address"
+  }
+}

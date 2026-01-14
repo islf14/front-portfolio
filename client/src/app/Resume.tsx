@@ -20,59 +20,7 @@ import TailwindIcon from '@/components/svg/TailwindIcon'
 import ViteIcon from '@/components/svg/ViteIcon'
 import NextIcon from '@/components/svg/NextIcon'
 import { useState } from 'react'
-
-const description =
-  "I am Full-Stack Developer and I have a Bachelor's Degree in Computer Science and Systems Engineering, with experience in different JavaScript's technologies also databases."
-
-const experiences = [
-  {
-    company: 'District Municipality of Ilabaya',
-    place: 'Ilabaya - Tacna, Peru',
-    position: 'Project Assistant',
-    date: 'April 2023 - October 2024',
-    activities: ['Systems administration.', 'Project management and teamwork.']
-  },
-  {
-    company: 'District Municipality of Ilabaya',
-    place: 'Ilabaya - Tacna, Peru',
-    position: 'ICT Assistant',
-    date: 'May 2021 - December 2022',
-    activities: [
-      'Systems support.',
-      'Technical support for computer equipment and structured cabling.',
-      'Project management and teamwork.'
-    ]
-  },
-  {
-    company:
-      'Local Educational Management Unit of Tacna and Regional Directorate of Education of Tacna',
-    place: 'Tacna, Perú',
-    position: 'Professional Internship',
-    date: 'March 2020 - February 2021',
-    activities: [
-      'Develop new modules for the web-based document processing system.',
-      'Verify the correct functioning of the structured cabling.',
-      'Resolve any issues.'
-    ]
-  },
-  {
-    company: 'District Municipality of Coronel Gregorio Albarracín Lanchipa',
-    place: 'Coronel Gregorio Albarracín Lanchipa - Tacna, Perú',
-    position: 'Internship',
-    date: 'April 2019 - Agost 2019',
-    activities: [
-      'Develop modules for a mobile application for incident monitoring',
-      'Technical support for computer equipment and local network.'
-    ]
-  }
-]
-
-const education = {
-  entity: 'Jorge Basadre Grohmann National University',
-  place: 'Tacna, Peru',
-  grade: "Bachelor's degree in Computer Engineering and Systems",
-  date: 'December 2020'
-}
+import { useTranslation } from 'react-i18next'
 
 const skillsBack = [
   { name: 'NodeJs', icon: <NodeIcon /> },
@@ -107,6 +55,63 @@ const skillsMobile = [{ name: 'React Native', icon: <ReactIcon /> }]
 // *******************************
 
 export default function Resume() {
+  const { t } = useTranslation()
+
+  const description = t('resume.description')
+
+  const experiences = [
+    {
+      company: 'District Municipality of Ilabaya',
+      place: 'Ilabaya - Tacna, Peru',
+      position: 'Project Assistant',
+      date: 'April 2023 - October 2024',
+      activities: [
+        'Systems administration.',
+        'Project management and teamwork.'
+      ]
+    },
+    {
+      company: 'District Municipality of Ilabaya',
+      place: 'Ilabaya - Tacna, Peru',
+      position: 'ICT Assistant',
+      date: 'May 2021 - December 2022',
+      activities: [
+        'Systems support.',
+        'Technical support for computer equipment and structured cabling.',
+        'Project management and teamwork.'
+      ]
+    },
+    {
+      company:
+        'Local Educational Management Unit of Tacna and Regional Directorate of Education of Tacna',
+      place: 'Tacna, Perú',
+      position: 'Professional Internship',
+      date: 'March 2020 - February 2021',
+      activities: [
+        'Develop new modules for the web-based document processing system.',
+        'Verify the correct functioning of the structured cabling.',
+        'Resolve any issues.'
+      ]
+    },
+    {
+      company: 'District Municipality of Coronel Gregorio Albarracín Lanchipa',
+      place: 'Coronel Gregorio Albarracín Lanchipa - Tacna, Perú',
+      position: 'Internship',
+      date: 'April 2019 - Agost 2019',
+      activities: [
+        'Develop modules for a mobile application for incident monitoring',
+        'Technical support for computer equipment and local network.'
+      ]
+    }
+  ]
+
+  const education = {
+    entity: 'Jorge Basadre Grohmann National University',
+    place: 'Tacna, Peru',
+    grade: "Bachelor's degree in Computer Engineering and Systems",
+    date: 'December 2020'
+  }
+
   const [exp, setExp] = useState<boolean>(true)
   const [edu, setEdu] = useState<boolean>(false)
   const [ski, setSki] = useState<boolean>(false)
@@ -128,9 +133,9 @@ export default function Resume() {
   }
 
   const btns = [
-    { name: 'Experience', onClick: manageExp, status: exp },
-    { name: 'Skills', onClick: manageSki, status: ski },
-    { name: 'Education', onClick: manageEdu, status: edu }
+    { name: t('resume.experience'), onClick: manageExp, status: exp },
+    { name: t('resume.skills'), onClick: manageSki, status: ski },
+    { name: t('resume.education'), onClick: manageEdu, status: edu }
   ]
 
   return (
@@ -163,7 +168,8 @@ export default function Resume() {
           {/* experience */}
           <div role="tappanel" tabIndex={0} hidden={!exp} className="">
             <h2 className="font-bold text-2xl">
-              Experience<span className="text-ac">:</span>
+              {t('resume.experience')}
+              <span className="text-ac">:</span>
             </h2>
             <div className="grid mt-4 gap-3 lg:grid-cols-2 2xl:grid-cols-3">
               {/* card experience */}
@@ -185,7 +191,8 @@ export default function Resume() {
           {/* skills */}
           <div hidden={!ski} className="mt-6 md:mt-0">
             <h2 className="font-bold text-2xl">
-              Skills<span className="text-ac">:</span>
+              {t('resume.skills')}
+              <span className="text-ac">:</span>
             </h2>
             {/* Backend */}
             <h3 className="mt-5 font-bold text-xl">Backend:</h3>
@@ -252,7 +259,8 @@ export default function Resume() {
           {/* education */}
           <div hidden={!edu} className="mt-6 md:mt-0">
             <h2 className="font-bold text-2xl">
-              Education<span className="text-ac">:</span>
+              {t('resume.education')}
+              <span className="text-ac">:</span>
             </h2>
             <div className="grid mt-4 gap-3">
               {/* card education */}

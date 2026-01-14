@@ -4,17 +4,20 @@ import { Menu, X } from 'lucide-react'
 import { Link, NavLink } from 'react-router'
 import logoLight from '@/assets/logo/logoIsaias.png'
 import logoDark from '@/assets/logo/logoIsaiasDark.png'
-
-const menuLinks = [
-  { name: 'Home', path: '/' },
-  { name: 'Resume', path: '/resume' },
-  { name: 'Contact', path: '/contact' }
-]
+import { useTranslation } from 'react-i18next'
+import Language from './Language'
 
 export default function Header() {
+  const { t } = useTranslation()
   const [isOpen, setIsOpen] = useState<boolean>(false)
   const btnMenuRef = useRef<HTMLButtonElement>(null)
   const menuRef = useRef<HTMLDivElement>(null)
+
+  const menuLinks = [
+    { name: t('nav.home'), path: '/' },
+    { name: t('nav.resume'), path: '/resume' },
+    { name: t('nav.contact'), path: '/contact' }
+  ]
 
   const handleNav = () => {
     setIsOpen(!isOpen)
@@ -29,6 +32,7 @@ export default function Header() {
     }
   }
 
+  // handle the listener to close the nav
   useEffect(() => {
     if (isOpen) {
       document.addEventListener('mousedown', handleListener)
@@ -66,6 +70,7 @@ export default function Header() {
           <div className="inline-flex gap-2 sm:order-2 z-10">
             {/* theme button */}
             <Dark />
+            <Language />
             {/* menu button */}
             <button
               ref={btnMenuRef}

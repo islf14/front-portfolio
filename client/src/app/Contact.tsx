@@ -2,13 +2,7 @@ import GhIcon from '@/components/svg/GhIcon'
 import LinkedinIcon from '@/components/svg/LinkedinIcon'
 import WpIcon from '@/components/svg/WpIcon'
 import { Mail, MapPinHouse, Phone, User } from 'lucide-react'
-
-const info = [
-  { name: 'Name', value: 'Isaias Laqui Flores', icon: <User /> },
-  { name: 'Email', value: 'isaiaslflores@gmail.com', icon: <Mail /> },
-  { name: 'Phone', value: '+51 931 994 472', icon: <Phone /> },
-  { name: 'Address', value: 'Tacna - Peru', icon: <MapPinHouse /> }
-]
+import { useTranslation } from 'react-i18next'
 
 const links = [
   { url: 'https://github.com/islf14', icon: <GhIcon /> },
@@ -17,6 +11,19 @@ const links = [
 ]
 
 export default function Contact() {
+  const { t } = useTranslation()
+
+  const info = [
+    { name: t('contact.name'), value: 'Isaias Laqui Flores', icon: <User /> },
+    {
+      name: t('contact.email'),
+      value: 'isaiaslflores@gmail.com',
+      icon: <Mail />
+    },
+    { name: t('contact.cellphone'), value: '+51 931 994 472', icon: <Phone /> },
+    { name: t('contact.address'), value: 'Tacna - Peru', icon: <MapPinHouse /> }
+  ]
+
   return (
     <section className="container mx-auto">
       <div className="mx-2 mt-8">

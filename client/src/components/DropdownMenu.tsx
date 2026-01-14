@@ -1,8 +1,8 @@
-import React, { useState, useRef, useEffect } from 'react'
-import { Moon, Sun } from 'lucide-react'
+import React, { useState, useRef, useEffect, type ReactElement } from 'react'
 
 type ddmpros = {
   items: item[]
+  icon: ReactElement
 }
 
 export type item = {
@@ -10,23 +10,24 @@ export type item = {
   setFunction: () => void
 }
 
-export function DropdownMenu({ items }: ddmpros) {
+export function DropdownMenu({ items, icon }: ddmpros) {
   const [isOpen, setIsOpen] = useState<boolean>(false)
   const [focusedIndex, setFocusedIndex] = useState<number | null>(null)
-  const dropdownRef = useRef<HTMLButtonElement | null>(null)
+  const dropdownBtnRef = useRef<HTMLButtonElement | null>(null)
   const ulRef = useRef<HTMLUListElement | null>(null)
-  const dropContainer = useRef<HTMLDivElement>(null)
+  const dropContainerRef = useRef<HTMLDivElement>(null)
 
   const handleToggle = () => {
     setIsOpen(!isOpen)
   }
 
   const handleListener = (e: MouseEvent) => {
-    if (!dropContainer.current?.contains(e.target as Node)) {
+    if (!dropContainerRef.current?.contains(e.target as Node)) {
       setIsOpen(false)
     }
   }
 
+  // handle the listener to close the menu
   useEffect(() => {
     if (isOpen && ulRef.current) {
       document.addEventListener('mousedown', handleListener)
@@ -39,7 +40,7 @@ export function DropdownMenu({ items }: ddmpros) {
     }
   }, [isOpen])
 
-  // handle options for button
+  // handle options for theme button
   const handleButtonKeyDown = (
     event: React.KeyboardEvent<HTMLButtonElement>
   ) => {
@@ -59,7 +60,7 @@ export function DropdownMenu({ items }: ddmpros) {
     li?.focus()
   }
 
-  // handle options for items
+  // handle options for items buttons
   const handleMenuItemKeyDown = (
     event: React.KeyboardEvent<HTMLLIElement>,
     index: number
@@ -94,27 +95,26 @@ export function DropdownMenu({ items }: ddmpros) {
       items[index].setFunction()
       setIsOpen(false)
       // setFocusedIndex(0) // Clear focused state
-      dropdownRef.current?.focus() // Return focus to the button
+      dropdownBtnRef.current?.focus() // Return focus to the button
     } else if (event.key === 'Escape') {
       event.preventDefault()
       setIsOpen(false)
       // setFocusedIndex(0)
-      dropdownRef.current?.focus()
+      dropdownBtnRef.current?.focus()
     }
   }
 
   return (
-    <div className="" ref={dropContainer}>
+    <div className="" ref={dropContainerRef}>
       <button
-        ref={dropdownRef}
+        ref={dropdownBtnRef}
         onClick={handleToggle}
         onKeyDown={handleButtonKeyDown}
         aria-haspopup="true"
         aria-expanded={isOpen}
         className="inline-flex justify-center items-center border rounded-md bg-background transition-all shadow-xs [&_svg]:size-4 [&_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] hover:bg-accent hover:text-accent-foreground size-9 dark:bg-input/30 dark:border-input dark:hover:bg-input/50"
       >
-        <Sun className="h-[1.2rem] w-[1.2rem] scale-100 rotate-0 transition-all dark:scale-0 dark:-rotate-90" />
-        <Moon className="absolute h-[1.2rem] w-[1.2rem] scale-0 rotate-90 transition-all dark:scale-100 dark:rotate-0" />
+        {icon}
         <span className="sr-only">Toggle theme</span>
       </button>
       {/* -translate-x-[calc(100%-(var(--spacing)*9))] */}
@@ -137,7 +137,7 @@ export function DropdownMenu({ items }: ddmpros) {
                 item.setFunction()
                 setIsOpen(false)
                 setFocusedIndex(null)
-                dropdownRef.current?.focus()
+                dropdownBtnRef.current?.focus()
               }}
             >
               {item.value}
