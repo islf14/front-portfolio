@@ -1,0 +1,105 @@
+{
+  "nav": {
+    "home": "Inicio",
+    "resume": "Hoja de vida",
+    "contact": "Contacto"
+  },
+  "theme": {
+    "light": "Claro",
+    "dark": "Oscuro",
+    "system": "Sistema"
+  },
+  "home": {
+    "title": "Desarrollador de Software",
+    "name1": "Hola, soy",
+    "name2": "Isaías Laqui",
+    "description": "Tengo experiencia práctica en stack MERN, con dominio en Express JS, NestJS y también Laravel, con la intención de aportar mis habilidades en aplicaciones web, aplicaciones móviles, bases de datos y desarrollo de API para contribuir a proyectos innovadores.",
+    "subtitle": "Projectos",
+    "projects": {
+      "project1": {
+        "title": "Acortador de URL",
+        "description": "Esta aplicación acorta URL. Toma los tres primeros caracteres de la URL proporcionada, junto con tres números, y crea una ruta de seis caracteres. Si la ruta ya está en uso, modifica la última letra y la siguiente hasta que esté disponible."
+      },
+      "project2": {
+        "title": "Charlar",
+        "description": "Esta aplicación web crea una sala de chat donde cualquiera puede unirse y enviar mensajes. No es posible que dos usuarios tengan el mismo nombre. Cuando el último usuario cierra sesión, el chat se cierra y los usuarios se reinician. Luego, el nuevo usuario inicia sesión y crea un nuevo chat."
+      },
+      "project3": {
+        "title": "Directorio de empresas",
+        "description": "Esta aplicación permite registrar usuarios, categorías y empresas. Utiliza jsonwebtoken para la autenticación, bcrypt para el hash de contraseñas y almacenamiento de blobs para imágenes. También configuro CSP y CORS para mayor seguridad."
+      }
+    }
+  },
+  "resume": {
+    "description": "Soy Desarrollador Full-Stack y tengo Bachiller en Ingeniería en Informática y Sistemas, con experiencia en diferentes tecnologías de JavaScript también bases de datos.",
+    "experience": "Experiencia",
+    "jobs": {
+      "job1": {
+        "company": "Municipalidad Distrital de Ilabaya",
+        "place": "Ilabaya - Tacna, Perú",
+        "position": "Asistente de projecto",
+        "date": "Abril 2023 - Octubre 2024",
+        "activities": [
+          "Coordiné actividades entre equipos, asegurando comunicación efectiva y flujo de información actualizado",
+          "Elaboré reportes cronogramas y avances de los proyectos",
+          "Propuse mejoras para el seguimiento a la ejecución de proyectos y trabajo en equipo."
+        ]
+      },
+      "job2": {
+        "company": "Municipalidad Distrital de Ilabaya",
+        "place": "Ilabaya - Tacna, Perú",
+        "position": "Asistente TIC",
+        "date": "MayO 2021 - Diciembre 2022",
+        "activities": [
+          "Contribuí en la gestión e implementación de soluciones TIC: infraestructura, software, plataformas web y capacitaciones.",
+          "Atendí incidencias de hardware y software, solucionando problemas técnicos para usuarios de la entidad.",
+          "Instalé, configuré y actualicé sistemas operativos, aplicaciones y equipos informáticos.",
+          "Gestioné redes básicas: configuración de routers, Wi-Fi, cableado estructurado y diagnóstico de conectividad."
+        ]
+      },
+      "job3": {
+        "company": "Unidad de Gestión Educativa Local y Dirección Regional de Educación Tacna",
+        "place": "Tacna, Perú",
+        "position": "Practicante Profesional",
+        "date": "Marzo 2020 - Febrero 2021",
+        "activities": [
+          "Desarrollé módulos nuevos para el sistema web de trámite documentario.",
+          "Verifiqué y corregí incidencias para  el correcto funcionamiento del cableado estructurado.",
+          "Atendí incidentes y brindé soporte presencial."
+        ]
+      },
+      "job4": {
+        "company": "Municipalidad Distrital Coronel Gregorio Albarracín Lanchipa",
+        "place": "Coronel Gregorio Albarracín Lanchipa - Tacna, Perú",
+        "position": "Practicante",
+        "date": "Abril 2019 - Agosto 2019",
+        "activities": [
+          "Desarrollo de módulos para una aplicación móvil de monitorización de incidentes.",
+          "Soporte técnico para equipos informáticos y red local."
+        ]
+      }
+    },
+    "skills": "Habilidades",
+    "education": "Educación",
+    "studies": {
+      "studie1": {
+        "entity": "Universidad Nacional Jorge Basadre Grohmann",
+        "place": "Tacna, Perú",
+        "grade": "Bachiller en Ingeniería en Informática y Sistemas",
+        "date": "Diciembre 2020"
+      },
+      "studie2": {
+        "entity": "I.S.T. Francisco de Paula Gonzales Vigil",
+        "place": "Tacna, Perú",
+        "grade": "Egresado en Electrónica Industrial",
+        "date": "Diciembre 2011"
+      }
+    }
+  },
+  "contact": {
+    "name": "Nombre",
+    "email": "Correo electrónico",
+    "cellphone": "Teléfono móvil",
+    "address": "Dirección"
+  }
+}
