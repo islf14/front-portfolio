@@ -4,8 +4,10 @@
     "resume": "Resume",
     "contact": "Contact"
   },
-  "header": {
-    "message": "Welcome"
+  "theme": {
+    "light": "Light",
+    "dark": "Dark",
+    "system": "System"
   },
   "home": {
     "title": "Software Developer",
@@ -31,8 +33,68 @@
   "resume": {
     "description": "I am Full-Stack Developer and I have a Bachelor's Degree in Computer Science and Systems Engineering, with experience in different JavaScript's technologies also databases.",
     "experience": "Experience",
+    "jobs": {
+      "job1": {
+        "company": "District Municipality of Ilabaya",
+        "place": "Ilabaya - Tacna, Peru",
+        "position": "Project Assistant",
+        "date": "April 2023 - October 2024",
+        "activities": [
+          "I coordinated activities between teams, ensuring effective communication and an up-to-date flow of information.",
+          "I prepared reports, schedules, and project progress updates.",
+          "I proposed improvements for monitoring project execution and teamwork."
+        ]
+      },
+      "job2": {
+        "company": "District Municipality of Ilabaya",
+        "place": "Ilabaya - Tacna, Peru",
+        "position": "ICT Assistant",
+        "date": "May 2021 - December 2022",
+        "activities": [
+          "I contributed to the management and implementation of ICT solutions: infrastructure, software, web platforms, and training.",
+          "I addressed hardware and software issues, resolving technical problems for the organization's users.",
+          "I installed, configured, and updated operating systems, applications, and computer equipment.",
+          "I managed basic networks: configuring routers, Wi-Fi, structured cabling, and performing connectivity diagnostics."
+        ]
+      },
+      "job3": {
+        "company": "Local Educational Management Unit of Tacna and Regional Directorate of Education of Tacna",
+        "place": "Tacna, Perú",
+        "position": "Professional Internship",
+        "date": "March 2020 - February 2021",
+        "activities": [
+          "I developed new modules for the web-based document management system.",
+          "I verified and corrected issues to ensure the proper functioning of the structured cabling.",
+          "I handled incidents and provided on-site support."
+        ]
+      },
+      "job4": {
+        "company": "District Municipality of Coronel Gregorio Albarracín Lanchipa",
+        "place": "Coronel Gregorio Albarracín Lanchipa - Tacna, Perú",
+        "position": "Internship",
+        "date": "April 2019 - Agost 2019",
+        "activities": [
+          "Develop modules for a mobile application for incident monitoring.",
+          "Technical support for computer equipment and local network."
+        ]
+      }
+    },
     "skills": "Skills",
-    "education": "Education"
+    "education": "Education",
+    "studies": {
+      "studie1": {
+        "entity": "Jorge Basadre Grohmann National University",
+        "place": "Tacna, Peru",
+        "grade": "Bachelor's degree in Computer Engineering and Systems",
+        "date": "December 2020"
+      },
+      "studie2": {
+        "entity": "I.S.T. Francisco de Paula Gonzales Vigil",
+        "place": "Tacna, Peru",
+        "grade": "Graduate in Industrial Electronics",
+        "date": "December 2011"
+      }
+    }
   },
   "contact": {
     "name": "Name",

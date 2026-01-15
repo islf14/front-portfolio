@@ -1,13 +1,15 @@
 import { Moon, Sun } from 'lucide-react'
 import { DropdownMenu, type item } from './DropdownMenu'
 import { useTheme } from './use-theme'
+import { useTranslation } from 'react-i18next'
 
 export default function Dark() {
+  const { t } = useTranslation()
   const { setTheme } = useTheme()
   const themes: item[] = [
-    { value: 'Light', setFunction: () => setTheme('light') },
-    { value: 'Dark', setFunction: () => setTheme('dark') },
-    { value: 'System', setFunction: () => setTheme('system') }
+    { value: t('theme.light'), setFunction: () => setTheme('light') },
+    { value: t('theme.dark'), setFunction: () => setTheme('dark') },
+    { value: t('theme.system'), setFunction: () => setTheme('system') }
   ]
 
   const icon = (

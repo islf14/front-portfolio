@@ -4,8 +4,10 @@
     "resume": "Hoja de vida",
     "contact": "Contacto"
   },
-  "header": {
-    "message": "Hola"
+  "theme": {
+    "light": "Claro",
+    "dark": "Oscuro",
+    "system": "Sistema"
   },
   "home": {
     "title": "Desarrollador de Software",
@@ -31,8 +33,68 @@
   "resume": {
     "description": "Soy Desarrollador Full-Stack y tengo Bachiller en Ingeniería en Informática y Sistemas, con experiencia en diferentes tecnologías de JavaScript también bases de datos.",
     "experience": "Experiencia",
+    "jobs": {
+      "job1": {
+        "company": "Municipalidad Distrital de Ilabaya",
+        "place": "Ilabaya - Tacna, Perú",
+        "position": "Asistente de projecto",
+        "date": "Abril 2023 - Octubre 2024",
+        "activities": [
+          "Coordiné actividades entre equipos, asegurando comunicación efectiva y flujo de información actualizado",
+          "Elaboré reportes cronogramas y avances de los proyectos",
+          "Propuse mejoras para el seguimiento a la ejecución de proyectos y trabajo en equipo."
+        ]
+      },
+      "job2": {
+        "company": "Municipalidad Distrital de Ilabaya",
+        "place": "Ilabaya - Tacna, Perú",
+        "position": "Asistente TIC",
+        "date": "MayO 2021 - Diciembre 2022",
+        "activities": [
+          "Contribuí en la gestión e implementación de soluciones TIC: infraestructura, software, plataformas web y capacitaciones.",
+          "Atendí incidencias de hardware y software, solucionando problemas técnicos para usuarios de la entidad.",
+          "Instalé, configuré y actualicé sistemas operativos, aplicaciones y equipos informáticos.",
+          "Gestioné redes básicas: configuración de routers, Wi-Fi, cableado estructurado y diagnóstico de conectividad."
+        ]
+      },
+      "job3": {
+        "company": "Unidad de Gestión Educativa Local y Dirección Regional de Educación Tacna",
+        "place": "Tacna, Perú",
+        "position": "Practicante Profesional",
+        "date": "Marzo 2020 - Febrero 2021",
+        "activities": [
+          "Desarrollé módulos nuevos para el sistema web de trámite documentario.",
+          "Verifiqué y corregí incidencias para  el correcto funcionamiento del cableado estructurado.",
+          "Atendí incidentes y brindé soporte presencial."
+        ]
+      },
+      "job4": {
+        "company": "Municipalidad Distrital Coronel Gregorio Albarracín Lanchipa",
+        "place": "Coronel Gregorio Albarracín Lanchipa - Tacna, Perú",
+        "position": "Practicante",
+        "date": "Abril 2019 - Agosto 2019",
+        "activities": [
+          "Desarrollo de módulos para una aplicación móvil de monitorización de incidentes.",
+          "Soporte técnico para equipos informáticos y red local."
+        ]
+      }
+    },
     "skills": "Habilidades",
-    "education": "Educación"
+    "education": "Educación",
+    "studies": {
+      "studie1": {
+        "entity": "Universidad Nacional Jorge Basadre Grohmann",
+        "place": "Tacna, Perú",
+        "grade": "Bachiller en Ingeniería en Informática y Sistemas",
+        "date": "Diciembre 2020"
+      },
+      "studie2": {
+        "entity": "I.S.T. Francisco de Paula Gonzales Vigil",
+        "place": "Tacna, Perú",
+        "grade": "Egresado en Electrónica Industrial",
+        "date": "Diciembre 2011"
+      }
+    }
   },
   "contact": {
     "name": "Nombre",

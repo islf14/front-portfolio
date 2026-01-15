@@ -61,55 +61,56 @@ export default function Resume() {
 
   const experiences = [
     {
-      company: 'District Municipality of Ilabaya',
-      place: 'Ilabaya - Tacna, Peru',
-      position: 'Project Assistant',
-      date: 'April 2023 - October 2024',
+      company: t('resume.jobs.job1.company'),
+      place: t('resume.jobs.job1.place'),
+      position: t('resume.jobs.job1.position'),
+      date: t('resume.jobs.job1.date'),
       activities: [
-        'Systems administration.',
-        'Project management and teamwork.'
+        t('resume.jobs.job1.activities.0'),
+        t('resume.jobs.job1.activities.1'),
+        t('resume.jobs.job1.activities.2')
       ]
     },
     {
-      company: 'District Municipality of Ilabaya',
-      place: 'Ilabaya - Tacna, Peru',
-      position: 'ICT Assistant',
-      date: 'May 2021 - December 2022',
+      company: t('resume.jobs.job2.company'),
+      place: t('resume.jobs.job2.place'),
+      position: t('resume.jobs.job2.position'),
+      date: t('resume.jobs.job2.date'),
       activities: [
-        'Systems support.',
-        'Technical support for computer equipment and structured cabling.',
-        'Project management and teamwork.'
+        t('resume.jobs.job2.activities.0'),
+        t('resume.jobs.job2.activities.1'),
+        t('resume.jobs.job2.activities.2'),
+        t('resume.jobs.job2.activities.3')
       ]
     },
     {
-      company:
-        'Local Educational Management Unit of Tacna and Regional Directorate of Education of Tacna',
-      place: 'Tacna, Perú',
-      position: 'Professional Internship',
-      date: 'March 2020 - February 2021',
+      company: t('resume.jobs.job3.company'),
+      place: t('resume.jobs.job3.place'),
+      position: t('resume.jobs.job3.position'),
+      date: t('resume.jobs.job3.date'),
       activities: [
-        'Develop new modules for the web-based document processing system.',
-        'Verify the correct functioning of the structured cabling.',
-        'Resolve any issues.'
+        t('resume.jobs.job3.activities.0'),
+        t('resume.jobs.job3.activities.1'),
+        t('resume.jobs.job3.activities.2')
       ]
     },
     {
-      company: 'District Municipality of Coronel Gregorio Albarracín Lanchipa',
-      place: 'Coronel Gregorio Albarracín Lanchipa - Tacna, Perú',
-      position: 'Internship',
-      date: 'April 2019 - Agost 2019',
+      company: t('resume.jobs.job4.company'),
+      place: t('resume.jobs.job4.place'),
+      position: t('resume.jobs.job4.position'),
+      date: t('resume.jobs.job4.date'),
       activities: [
-        'Develop modules for a mobile application for incident monitoring',
-        'Technical support for computer equipment and local network.'
+        t('resume.jobs.job4.activities.0'),
+        t('resume.jobs.job4.activities.1')
       ]
     }
   ]
 
   const education = {
-    entity: 'Jorge Basadre Grohmann National University',
-    place: 'Tacna, Peru',
-    grade: "Bachelor's degree in Computer Engineering and Systems",
-    date: 'December 2020'
+    entity: t('resume.studies.studie1.entity'),
+    place: t('resume.studies.studie1.place'),
+    grade: t('resume.studies.studie1.grade'),
+    date: t('resume.studies.studie1.date')
   }
 
   const [exp, setExp] = useState<boolean>(true)
