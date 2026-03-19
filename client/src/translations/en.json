@@ -40,9 +40,10 @@
         "position": "Project Assistant",
         "date": "April 2023 - October 2024",
         "activities": [
-          "I coordinated activities between teams, ensuring effective communication and an up-to-date flow of information.",
-          "I prepared reports, schedules, and project progress updates.",
-          "I proposed improvements for monitoring project execution and teamwork."
+          "I provided technical support to the department, correcting IP configurations and installing new structured cabling.",
+          "I prepared project progress reports for a web-based system developed in Laravel.",
+          "I proposed improvements for monitoring project execution and teamwork.",
+          "I coordinated activities between work teams, ensuring effective communication and an up-to-date information flow."
         ]
       },
       "job2": {
@@ -51,10 +52,10 @@
         "position": "ICT Assistant",
         "date": "May 2021 - December 2022",
         "activities": [
-          "I contributed to the management and implementation of ICT solutions: infrastructure, software, web platforms, and training.",
-          "I addressed hardware and software issues, resolving technical problems for the organization's users.",
-          "I installed, configured, and updated operating systems, applications, and computer equipment.",
-          "I managed basic networks: configuring routers, Wi-Fi, structured cabling, and performing connectivity diagnostics."
+          "I handled hardware and software issues; I installed, configured, and updated operating systems.",
+          "I managed networks: configuring routers, Wi-Fi, point-to-point antennas, structured cabling, and performing connectivity diagnostics.",
+          "I contributed to the management and implementation of ICT solutions: infrastructure, software, and web platforms.",
+          "I updated the announcements and news module of the website developed in Laravel."
         ]
       },
       "job3": {

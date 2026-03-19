@@ -68,7 +68,8 @@ export default function Resume() {
       activities: [
         t('resume.jobs.job1.activities.0'),
         t('resume.jobs.job1.activities.1'),
-        t('resume.jobs.job1.activities.2')
+        t('resume.jobs.job1.activities.2'),
+        t('resume.jobs.job1.activities.3')
       ]
     },
     {

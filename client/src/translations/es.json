@@ -40,9 +40,10 @@
         "position": "Asistente de projecto",
         "date": "Abril 2023 - Octubre 2024",
         "activities": [
-          "Coordiné actividades entre equipos, asegurando comunicación efectiva y flujo de información actualizado",
-          "Elaboré reportes cronogramas y avances de los proyectos",
-          "Propuse mejoras para el seguimiento a la ejecución de proyectos y trabajo en equipo."
+          "Brindé soporte técnico al área, corrigiendo configuración de IPs y nuevo cableado estructurado.",
+          "Elaboré reportes de avances de los proyectos en un sistema web desarrollado en Laravel.",
+          "Propuse mejoras para el seguimiento a la ejecución de proyectos y trabajo en equipo.",
+          "Coordiné actividades entre equipos de trabajo, asegurando comunicación efectiva y flujo de información actualizado."
         ]
       },
       "job2": {
@@ -51,10 +52,10 @@
         "position": "Asistente TIC",
         "date": "MayO 2021 - Diciembre 2022",
         "activities": [
-          "Contribuí en la gestión e implementación de soluciones TIC: infraestructura, software, plataformas web y capacitaciones.",
-          "Atendí incidencias de hardware y software, solucionando problemas técnicos para usuarios de la entidad.",
-          "Instalé, configuré y actualicé sistemas operativos, aplicaciones y equipos informáticos.",
-          "Gestioné redes básicas: configuración de routers, Wi-Fi, cableado estructurado y diagnóstico de conectividad."
+          "Atendí incidencias de hardware y software; instalé, configuré y actualicé sistemas operativos.",
+          "Gestioné redes: configuración de routers, WiFi, antenas punto a punto, cableado estructurado y diagnóstico de conectividad.",
+          "Contribuí en la gestión e implementación de soluciones TIC: infraestructura, software y plataformas web.",
+          "Hice actualizaciones al módulo de comunicados y noticias de la página web desarrollada en Laravel."
         ]
       },
       "job3": {
