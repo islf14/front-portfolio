@@ -1,12 +1,14 @@
 import { Languages } from 'lucide-react'
 import { DropdownMenu, type item } from './DropdownMenu'
 import { useTranslation } from 'react-i18next'
+import { updateUrlWithLang } from './language-prefix'
 
 export default function Language() {
   const { i18n } = useTranslation()
 
   const handleChangeLanguage = (lang: string) => {
     i18n.changeLanguage(lang)
+    updateUrlWithLang(lang)
   }
   const languages: item[] = [
     { value: 'English', setFunction: () => handleChangeLanguage('en') },

@@ -9,10 +9,12 @@ type ThemeProviderProps = {
   storageKey?: string
 }
 
+export const themeNameStorageKey = 'isdev-ui-theme'
+
 export function ThemeProvider({
   children,
   defaultTheme = 'system',
-  storageKey = 'IsDev-ui-theme',
+  storageKey = themeNameStorageKey,
   ...props
 }: ThemeProviderProps) {
   const [theme, setTheme] = useState<Theme>(
