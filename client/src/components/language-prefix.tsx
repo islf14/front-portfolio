@@ -55,7 +55,8 @@ function updateUrlWithLang(lang: string) {
 if (typeof window !== 'undefined') {
   const firstSeg = getLangFromPath()
   if (!firstSeg || !supportedLngs.includes(firstSeg)) {
-    const newPath = `/${detectedLng}${window.location.pathname}`
+    const currentPath = window.location.pathname
+    const newPath = `/${detectedLng}${currentPath === '/' ? '' : currentPath}`
     if (
       !window.location.pathname.startsWith(`/${detectedLng}/`) &&
       window.location.pathname !== `/${detectedLng}`
